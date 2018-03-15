@@ -14,6 +14,8 @@ from utils.definitions import TOP_DIR
 
 # Instantiate and return objects, 0.1.0 and 0.2.0
 MainView = MainView()
+# we import all of our Gtk stuff in the view, but we want to do
+# builder.connect_signals() and Gtk.main_quit() here in mainctrl
 Gtk, builder = MainView.return_objects()
 MainModel = MainModel()
 
