@@ -6,7 +6,13 @@ import os.path
 import sys
 
 # Gtk imports
-from gi.repository import Gtk
+#gi.require_version('Gtk', '3.0')
+import gi
+try:
+    gi.require_version("Gtk", "3.0")
+    from gi.repository import Gtk
+except:
+    sys.exit("This script requires Gtk 3.0 or newer!")
 
 
 def setup_path():
@@ -22,15 +28,6 @@ def setup_path():
 
 def check_requirements():
     """Checks versions and other requirements"""
-    # Gtk version
-    import gi
-    try:
-        gi.require_version("Gtk", "3.0")
-    except:
-        sys.exit("This script requires Gtk 3.0 or newer!")
-    #print(Gtk.get_major_version(),
-            #Gtk.get_minor_version(),
-                #Gtk.get_micro_version())  # 3L, 10L, 9L
 
     # Python version
     if sys.version_info < (2, 7, 5):
