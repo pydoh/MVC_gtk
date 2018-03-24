@@ -4,7 +4,7 @@
 #import os
 #import libxml2
 #import pickle
-import ConfigParser
+import configparser
 
 # Application importsfile
 from views.dialogs import PreferenceDialog, EIQWDialog
@@ -12,7 +12,7 @@ from utils.fileutils import FileUtil
 from utils.definitions import CONFIG_ROOT, CONFIG_DIR, CONF_FILENAME, \
                                 DEFAULT_CONF  # , TYPE_REPR
 
-config = ConfigParser.RawConfigParser(allow_no_value=True)
+config = configparser.RawConfigParser(allow_no_value=True)
 
 
 class ConfigurationParser(object):
