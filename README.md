@@ -4,7 +4,7 @@ MVC_gtk is a Python/GTK3 skeleton project that shows how to use a Model/View/Con
 This skeleton project is derived from a skeleton project generated
 by gtkmvc progen-1.99.1.
 
-This program is compatible with Python 2.7.5 and GTK 3.x, and is
+This program is compatible with Python 3.6 and GTK 3.x, and is
 intended to be a simple introduction to the Model/View/Controller
 application structure.
 
