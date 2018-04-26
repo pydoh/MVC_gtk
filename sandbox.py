@@ -15,6 +15,7 @@ except:
     sys.exit("This script requires Gtk 3.0 or newer!")
 
 
+<<<<<<< HEAD
 # def setup_path():
 #     """Sets up the python include paths to include needed directories"""
 #     from sandbox.utils.definitions import TOP_DIR
@@ -24,6 +25,17 @@ except:
 #     sys.path.insert(0, os.path.join(TOP_DIR, "resources", "external"))
 #     sys.path.insert(0, os.path.join(TOP_DIR, "sandbox"))
 #     return
+=======
+#def setup_path():
+#    """Sets up the python include paths to include needed directories"""
+#   from sandbox.utils.definitions import TOP_DIR
+#    # We change this line;
+#    #sys.path.insert(0, reduce(os.path.join, (TOPDIR, "resources", "external")))
+#    # to this, and it works with Python3:
+#    sys.path.insert(0, os.path.join(TOP_DIR, "resources", "external"))
+#    sys.path.insert(0, os.path.join(TOP_DIR, "sandbox"))
+#    return
+>>>>>>> branch 'master' of https://github.com/pydoh/MVC_gtk.git
 
 
 def check_requirements():
