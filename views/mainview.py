@@ -14,7 +14,6 @@ except:
 # Application imports
 from utils.definitions import MAIN_GLADE
 #from views.dialogs import FileChooserDialog, PreferenceDialog, EIQWDialog
-#import sandbox.utils.definitions as utils  # for testing
 
 # Instantiate and pass objects, 0.1.0 and 0.2.0
 builder, buildable = Gtk.Builder(), Gtk.Buildable
