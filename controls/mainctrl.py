@@ -52,7 +52,7 @@ class MainCtrl(object):
             'on_new_activate': self.on_new_activate,
             'on_quit_activate': self.on_quit_activate,
             # Edit menu
-            "on_preference_activate": self.on_preference_activate,
+#             "on_preference_activate": self.on_preference_activate,
             }
         builder.connect_signals(sigs)
         return
