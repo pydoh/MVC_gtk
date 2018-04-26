@@ -1,5 +1,5 @@
-# SandboxMVC
-SandboxMVC is a Python/GTK3 skeleton project that shows how to use a Model/View/Controller pattern.
+# MVC_gtk
+MVC_gtk is a Python/GTK3 skeleton project that shows how to use a Model/View/Controller pattern.
 
 This skeleton project is derived from a skeleton project generated
 by gtkmvc progen-1.99.1.
