@@ -16,7 +16,7 @@ HOME = os.getenv('HOME')
 
 RESOURCES_DIR = os.path.join(TOP_DIR, "resources")
 GLADE_DIR = os.path.join(RESOURCES_DIR, "glade")
-MAIN_GLADE = os.path.join(GLADE_DIR, "sandbox.glade")
+MAIN_GLADE = os.path.join(GLADE_DIR, "mvc_gtk.glade")
 DIALOGS_GLADE = os.path.join(GLADE_DIR, "dialogs.glade")
 #_GLADE =
 
