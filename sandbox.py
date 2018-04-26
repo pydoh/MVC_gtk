@@ -40,7 +40,7 @@ def check_requirements():
 def main(*args, **kargs):
     """"""
     # Application imports
-    from ctrls.mainctrl import MainCtrl as MainCtrl
+    from controls.mainctrl import MainCtrl as MainCtrl
 
     MainCtrl()
 
