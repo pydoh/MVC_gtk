@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 
-# Ptyhon imports
+# Python imports
 #import os
 
 # Application imports
 from views.mainview import MainView
 #from views.dialogs import EIQWDialog
 from controls.dialogsctrl import FileDialogCtrl
-from controls.configuration import ConfigurationParser
+# from controls.configuration import ConfigurationParser
 from models.mainmodel import MainModel
 
 from utils.definitions import TOP_DIR
@@ -36,7 +36,7 @@ class MainCtrl(object):
         #print(dir(self))
 
         #TODO Parse or write, not both
-        self.parse_config()
+#         self.parse_config()
 
         self.connect_signals()
         return
@@ -104,47 +104,47 @@ class MainCtrl(object):
         Gtk.main_quit()
         return True
 
-    def on_preference_activate(self, event):
-        args = builder, MainView.mainwindow
-        kwargs = ConfigurationParser().get_prefs(*args)
-        return kwargs
+#     def on_preference_activate(self, event):
+#         args = builder, MainView.mainwindow
+#         kwargs = ConfigurationParser().get_prefs(*args)
+#         return kwargs
 
-    def parse_config(self):  # get_config
-        """Read the configuration file"""
-        #TODO
-        # Parsing and naming of configuration attributes
-        self.config = ConfigurationParser().parse()
-        ##cats = ('General', 'Appearance', 'Editor', 'Documentation')
-        ##for cat in cats:
-        for sec in self.config.sections():
-            options = self.config.options(sec)
-            for att in options:
-                try:
-                    attval = self.config.get(sec, att)
-                    # Name the attributes
-                    super(MainCtrl, self).__setattr__(att, attval)
-                    #print(att)
-                except TypeError:
-                    print('Broken')
-                    continue
+#     def parse_config(self):  # get_config
+#         """Read the configuration file"""
+#         #TODO
+#         # Parsing and naming of configuration attributes
+#         self.config = ConfigurationParser().parse()
+#         ##cats = ('General', 'Appearance', 'Editor', 'Documentation')
+#         ##for cat in cats:
+#         for sec in self.config.sections():
+#             options = self.config.options(sec)
+#             for att in options:
+#                 try:
+#                     attval = self.config.get(sec, att)
+#                     # Name the attributes
+#                     super(MainCtrl, self).__setattr__(att, attval)
+#                     #print(att)
+#                 except TypeError:
+#                     print('Broken')
+#                     continue
+# 
+#         #openfiles = self.textfile, self.imagefile
+#         #for f in openfiles:
+#             #if FileCtrl.file_exists(f) is True:
+#                 #path, name, ext = FileCtrl.split_path(f)
+#                 #if f.endswith('.txt'):
+#                     #content = FileCtrl.read_file(f)
+#                     #MainView.filenamelabel.set_text(name)
+#                     #MainView.load_texbuff(content)
+#                 #elif f.endswith('.png'):
+#                     #MainView.imagefile = self.imagefile
+#             #else:
+#                 #self.config.set('General', f, None)
+#                 #self.write_config()
+#         return
 
-        #openfiles = self.textfile, self.imagefile
-        #for f in openfiles:
-            #if FileCtrl.file_exists(f) is True:
-                #path, name, ext = FileCtrl.split_path(f)
-                #if f.endswith('.txt'):
-                    #content = FileCtrl.read_file(f)
-                    #MainView.filenamelabel.set_text(name)
-                    #MainView.load_texbuff(content)
-                #elif f.endswith('.png'):
-                    #MainView.imagefile = self.imagefile
-            #else:
-                #self.config.set('General', f, None)
-                #self.write_config()
-        return
-
-    def write_config(self):  # set_config
-        """Write the configuration file"""
-        return ConfigurationParser().write()
+#     def write_config(self):  # set_config
+#         """Write the configuration file"""
+#         return ConfigurationParser().write()
 
     pass  # end of class MainCtrl

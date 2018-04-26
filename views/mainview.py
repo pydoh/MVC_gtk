@@ -1,10 +1,15 @@
 # -*- coding: utf-8 -*-
 
 # Python imports
-#import os.path
+import sys
 
 # Gtk imports
-from gi.repository import Gtk
+import gi
+try:
+    gi.require_version('Gtk', '3.0')
+    from gi.repository import Gtk
+except:
+    sys.exit("This script requires Gtk 3.0 or newer!")
 
 # Application imports
 from utils.definitions import MAIN_GLADE
